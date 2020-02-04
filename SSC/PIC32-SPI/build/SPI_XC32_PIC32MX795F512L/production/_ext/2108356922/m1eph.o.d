@@ -1,0 +1,25 @@
+build/SPI_XC32_PIC32MX795F512L/production/_ext/2108356922/m1eph.o:  \
+ ../Common/m1eph.c  \
+../Common/ecat_def.h  \
+../Common/applInterface.h  \
+ ../Common/esc.h  \
+../Common/ecatslv.h  \
+../Common/9252_HW.h  \
+ /Applications/microchip/xc32/v1.40/pic32mx/include/peripheral/timer.h  \
+ /Applications/microchip/xc32/v1.40/pic32mx/include/peripheral/int.h  \
+ /Applications/microchip/xc32/v1.40/pic32mx/include/peripheral/int_5xx_6xx_7xx.h  \
+ /Applications/microchip/xc32/v1.40/pic32mx/include/peripheral/legacy/int_5xx_6xx_7xx_legacy.h  \
+ /Applications/microchip/xc32/v1.40/pic32mx/include/peripheral/legacy/int_legacy.h  \
+ ../Common/objdef.h  \
+../Common/sdoserv.h  \
+../Common/ecatcoe.h  \
+ ../Common/mailbox.h  \
+../Common/ecatappl.h  \
+../Common/eoeappl.h  \
+ ../Common/ecateoe.h  \
+../Common/foeappl.h  \
+../Common/m1eph.h  \
+ ../Common/m1ephObjects.h  \
+../scr/ti_wdt.h  \
+../scr/console.h  \
+ ../scr/semi_auto.h 
