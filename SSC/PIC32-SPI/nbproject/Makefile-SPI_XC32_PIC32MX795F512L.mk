@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../Common/9252_HW.c ../Common/coeappl.c ../Common/ecatappl.c ../Common/ecatcoe.c ../Common/ecateoe.c ../Common/ecatfoe.c ../Common/ecatslv.c ../Common/emcy.c ../Common/eoeappl.c ../Common/foeappl.c ../Common/mailbox.c ../Common/objdef.c ../Common/sdoserv.c MemoryManager/MemoryManager.c SPIDriver/SPIDriver.c configuration_bits.c exceptions.c interrupts.c main.c system.c user.c Scheduler.c ../scr/Common.c ../scr/I2C_Functions.c ../scr/ti_wdt.c ../scr/TPS238x.c ../scr/i2c.c ../scr/console.c ../scr/config.c ../scr/power_manage.c ../scr/semi_auto.c ../Common/m1eph.c
+SOURCEFILES_QUOTED_IF_SPACED=../Common/9252_HW.c ../Common/coeappl.c ../Common/ecatappl.c ../Common/ecatcoe.c ../Common/ecateoe.c ../Common/ecatfoe.c ../Common/ecatslv.c ../Common/emcy.c ../Common/eoeappl.c ../Common/foeappl.c ../Common/mailbox.c ../Common/objdef.c ../Common/sdoserv.c ../Common/m1eph.c MemoryManager/MemoryManager.c ../scr/Common.c ../scr/I2C_Functions.c ../scr/ti_wdt.c ../scr/TPS238x.c ../scr/i2c.c ../scr/console.c ../scr/config.c ../scr/power_manage.c ../scr/semi_auto.c SPIDriver/SPIDriver.c configuration_bits.c exceptions.c interrupts.c main.c system.c user.c Scheduler.c ../Common/bootmode.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2108356922/9252_HW.o ${OBJECTDIR}/_ext/2108356922/coeappl.o ${OBJECTDIR}/_ext/2108356922/ecatappl.o ${OBJECTDIR}/_ext/2108356922/ecatcoe.o ${OBJECTDIR}/_ext/2108356922/ecateoe.o ${OBJECTDIR}/_ext/2108356922/ecatfoe.o ${OBJECTDIR}/_ext/2108356922/ecatslv.o ${OBJECTDIR}/_ext/2108356922/emcy.o ${OBJECTDIR}/_ext/2108356922/eoeappl.o ${OBJECTDIR}/_ext/2108356922/foeappl.o ${OBJECTDIR}/_ext/2108356922/mailbox.o ${OBJECTDIR}/_ext/2108356922/objdef.o ${OBJECTDIR}/_ext/2108356922/sdoserv.o ${OBJECTDIR}/MemoryManager/MemoryManager.o ${OBJECTDIR}/SPIDriver/SPIDriver.o ${OBJECTDIR}/configuration_bits.o ${OBJECTDIR}/exceptions.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/user.o ${OBJECTDIR}/Scheduler.o ${OBJECTDIR}/_ext/1360936787/Common.o ${OBJECTDIR}/_ext/1360936787/I2C_Functions.o ${OBJECTDIR}/_ext/1360936787/ti_wdt.o ${OBJECTDIR}/_ext/1360936787/TPS238x.o ${OBJECTDIR}/_ext/1360936787/i2c.o ${OBJECTDIR}/_ext/1360936787/console.o ${OBJECTDIR}/_ext/1360936787/config.o ${OBJECTDIR}/_ext/1360936787/power_manage.o ${OBJECTDIR}/_ext/1360936787/semi_auto.o ${OBJECTDIR}/_ext/2108356922/m1eph.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2108356922/9252_HW.o.d ${OBJECTDIR}/_ext/2108356922/coeappl.o.d ${OBJECTDIR}/_ext/2108356922/ecatappl.o.d ${OBJECTDIR}/_ext/2108356922/ecatcoe.o.d ${OBJECTDIR}/_ext/2108356922/ecateoe.o.d ${OBJECTDIR}/_ext/2108356922/ecatfoe.o.d ${OBJECTDIR}/_ext/2108356922/ecatslv.o.d ${OBJECTDIR}/_ext/2108356922/emcy.o.d ${OBJECTDIR}/_ext/2108356922/eoeappl.o.d ${OBJECTDIR}/_ext/2108356922/foeappl.o.d ${OBJECTDIR}/_ext/2108356922/mailbox.o.d ${OBJECTDIR}/_ext/2108356922/objdef.o.d ${OBJECTDIR}/_ext/2108356922/sdoserv.o.d ${OBJECTDIR}/MemoryManager/MemoryManager.o.d ${OBJECTDIR}/SPIDriver/SPIDriver.o.d ${OBJECTDIR}/configuration_bits.o.d ${OBJECTDIR}/exceptions.o.d ${OBJECTDIR}/interrupts.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/system.o.d ${OBJECTDIR}/user.o.d ${OBJECTDIR}/Scheduler.o.d ${OBJECTDIR}/_ext/1360936787/Common.o.d ${OBJECTDIR}/_ext/1360936787/I2C_Functions.o.d ${OBJECTDIR}/_ext/1360936787/ti_wdt.o.d ${OBJECTDIR}/_ext/1360936787/TPS238x.o.d ${OBJECTDIR}/_ext/1360936787/i2c.o.d ${OBJECTDIR}/_ext/1360936787/console.o.d ${OBJECTDIR}/_ext/1360936787/config.o.d ${OBJECTDIR}/_ext/1360936787/power_manage.o.d ${OBJECTDIR}/_ext/1360936787/semi_auto.o.d ${OBJECTDIR}/_ext/2108356922/m1eph.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2108356922/9252_HW.o ${OBJECTDIR}/_ext/2108356922/coeappl.o ${OBJECTDIR}/_ext/2108356922/ecatappl.o ${OBJECTDIR}/_ext/2108356922/ecatcoe.o ${OBJECTDIR}/_ext/2108356922/ecateoe.o ${OBJECTDIR}/_ext/2108356922/ecatfoe.o ${OBJECTDIR}/_ext/2108356922/ecatslv.o ${OBJECTDIR}/_ext/2108356922/emcy.o ${OBJECTDIR}/_ext/2108356922/eoeappl.o ${OBJECTDIR}/_ext/2108356922/foeappl.o ${OBJECTDIR}/_ext/2108356922/mailbox.o ${OBJECTDIR}/_ext/2108356922/objdef.o ${OBJECTDIR}/_ext/2108356922/sdoserv.o ${OBJECTDIR}/_ext/2108356922/m1eph.o ${OBJECTDIR}/MemoryManager/MemoryManager.o ${OBJECTDIR}/_ext/1360936787/Common.o ${OBJECTDIR}/_ext/1360936787/I2C_Functions.o ${OBJECTDIR}/_ext/1360936787/ti_wdt.o ${OBJECTDIR}/_ext/1360936787/TPS238x.o ${OBJECTDIR}/_ext/1360936787/i2c.o ${OBJECTDIR}/_ext/1360936787/console.o ${OBJECTDIR}/_ext/1360936787/config.o ${OBJECTDIR}/_ext/1360936787/power_manage.o ${OBJECTDIR}/_ext/1360936787/semi_auto.o ${OBJECTDIR}/SPIDriver/SPIDriver.o ${OBJECTDIR}/configuration_bits.o ${OBJECTDIR}/exceptions.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/user.o ${OBJECTDIR}/Scheduler.o ${OBJECTDIR}/_ext/2108356922/bootmode.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2108356922/9252_HW.o.d ${OBJECTDIR}/_ext/2108356922/coeappl.o.d ${OBJECTDIR}/_ext/2108356922/ecatappl.o.d ${OBJECTDIR}/_ext/2108356922/ecatcoe.o.d ${OBJECTDIR}/_ext/2108356922/ecateoe.o.d ${OBJECTDIR}/_ext/2108356922/ecatfoe.o.d ${OBJECTDIR}/_ext/2108356922/ecatslv.o.d ${OBJECTDIR}/_ext/2108356922/emcy.o.d ${OBJECTDIR}/_ext/2108356922/eoeappl.o.d ${OBJECTDIR}/_ext/2108356922/foeappl.o.d ${OBJECTDIR}/_ext/2108356922/mailbox.o.d ${OBJECTDIR}/_ext/2108356922/objdef.o.d ${OBJECTDIR}/_ext/2108356922/sdoserv.o.d ${OBJECTDIR}/_ext/2108356922/m1eph.o.d ${OBJECTDIR}/MemoryManager/MemoryManager.o.d ${OBJECTDIR}/_ext/1360936787/Common.o.d ${OBJECTDIR}/_ext/1360936787/I2C_Functions.o.d ${OBJECTDIR}/_ext/1360936787/ti_wdt.o.d ${OBJECTDIR}/_ext/1360936787/TPS238x.o.d ${OBJECTDIR}/_ext/1360936787/i2c.o.d ${OBJECTDIR}/_ext/1360936787/console.o.d ${OBJECTDIR}/_ext/1360936787/config.o.d ${OBJECTDIR}/_ext/1360936787/power_manage.o.d ${OBJECTDIR}/_ext/1360936787/semi_auto.o.d ${OBJECTDIR}/SPIDriver/SPIDriver.o.d ${OBJECTDIR}/configuration_bits.o.d ${OBJECTDIR}/exceptions.o.d ${OBJECTDIR}/interrupts.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/system.o.d ${OBJECTDIR}/user.o.d ${OBJECTDIR}/Scheduler.o.d ${OBJECTDIR}/_ext/2108356922/bootmode.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/2108356922/9252_HW.o ${OBJECTDIR}/_ext/2108356922/coeappl.o ${OBJECTDIR}/_ext/2108356922/ecatappl.o ${OBJECTDIR}/_ext/2108356922/ecatcoe.o ${OBJECTDIR}/_ext/2108356922/ecateoe.o ${OBJECTDIR}/_ext/2108356922/ecatfoe.o ${OBJECTDIR}/_ext/2108356922/ecatslv.o ${OBJECTDIR}/_ext/2108356922/emcy.o ${OBJECTDIR}/_ext/2108356922/eoeappl.o ${OBJECTDIR}/_ext/2108356922/foeappl.o ${OBJECTDIR}/_ext/2108356922/mailbox.o ${OBJECTDIR}/_ext/2108356922/objdef.o ${OBJECTDIR}/_ext/2108356922/sdoserv.o ${OBJECTDIR}/MemoryManager/MemoryManager.o ${OBJECTDIR}/SPIDriver/SPIDriver.o ${OBJECTDIR}/configuration_bits.o ${OBJECTDIR}/exceptions.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/user.o ${OBJECTDIR}/Scheduler.o ${OBJECTDIR}/_ext/1360936787/Common.o ${OBJECTDIR}/_ext/1360936787/I2C_Functions.o ${OBJECTDIR}/_ext/1360936787/ti_wdt.o ${OBJECTDIR}/_ext/1360936787/TPS238x.o ${OBJECTDIR}/_ext/1360936787/i2c.o ${OBJECTDIR}/_ext/1360936787/console.o ${OBJECTDIR}/_ext/1360936787/config.o ${OBJECTDIR}/_ext/1360936787/power_manage.o ${OBJECTDIR}/_ext/1360936787/semi_auto.o ${OBJECTDIR}/_ext/2108356922/m1eph.o
+OBJECTFILES=${OBJECTDIR}/_ext/2108356922/9252_HW.o ${OBJECTDIR}/_ext/2108356922/coeappl.o ${OBJECTDIR}/_ext/2108356922/ecatappl.o ${OBJECTDIR}/_ext/2108356922/ecatcoe.o ${OBJECTDIR}/_ext/2108356922/ecateoe.o ${OBJECTDIR}/_ext/2108356922/ecatfoe.o ${OBJECTDIR}/_ext/2108356922/ecatslv.o ${OBJECTDIR}/_ext/2108356922/emcy.o ${OBJECTDIR}/_ext/2108356922/eoeappl.o ${OBJECTDIR}/_ext/2108356922/foeappl.o ${OBJECTDIR}/_ext/2108356922/mailbox.o ${OBJECTDIR}/_ext/2108356922/objdef.o ${OBJECTDIR}/_ext/2108356922/sdoserv.o ${OBJECTDIR}/_ext/2108356922/m1eph.o ${OBJECTDIR}/MemoryManager/MemoryManager.o ${OBJECTDIR}/_ext/1360936787/Common.o ${OBJECTDIR}/_ext/1360936787/I2C_Functions.o ${OBJECTDIR}/_ext/1360936787/ti_wdt.o ${OBJECTDIR}/_ext/1360936787/TPS238x.o ${OBJECTDIR}/_ext/1360936787/i2c.o ${OBJECTDIR}/_ext/1360936787/console.o ${OBJECTDIR}/_ext/1360936787/config.o ${OBJECTDIR}/_ext/1360936787/power_manage.o ${OBJECTDIR}/_ext/1360936787/semi_auto.o ${OBJECTDIR}/SPIDriver/SPIDriver.o ${OBJECTDIR}/configuration_bits.o ${OBJECTDIR}/exceptions.o ${OBJECTDIR}/interrupts.o ${OBJECTDIR}/main.o ${OBJECTDIR}/system.o ${OBJECTDIR}/user.o ${OBJECTDIR}/Scheduler.o ${OBJECTDIR}/_ext/2108356922/bootmode.o
 
 # Source Files
-SOURCEFILES=../Common/9252_HW.c ../Common/coeappl.c ../Common/ecatappl.c ../Common/ecatcoe.c ../Common/ecateoe.c ../Common/ecatfoe.c ../Common/ecatslv.c ../Common/emcy.c ../Common/eoeappl.c ../Common/foeappl.c ../Common/mailbox.c ../Common/objdef.c ../Common/sdoserv.c MemoryManager/MemoryManager.c SPIDriver/SPIDriver.c configuration_bits.c exceptions.c interrupts.c main.c system.c user.c Scheduler.c ../scr/Common.c ../scr/I2C_Functions.c ../scr/ti_wdt.c ../scr/TPS238x.c ../scr/i2c.c ../scr/console.c ../scr/config.c ../scr/power_manage.c ../scr/semi_auto.c ../Common/m1eph.c
+SOURCEFILES=../Common/9252_HW.c ../Common/coeappl.c ../Common/ecatappl.c ../Common/ecatcoe.c ../Common/ecateoe.c ../Common/ecatfoe.c ../Common/ecatslv.c ../Common/emcy.c ../Common/eoeappl.c ../Common/foeappl.c ../Common/mailbox.c ../Common/objdef.c ../Common/sdoserv.c ../Common/m1eph.c MemoryManager/MemoryManager.c ../scr/Common.c ../scr/I2C_Functions.c ../scr/ti_wdt.c ../scr/TPS238x.c ../scr/i2c.c ../scr/console.c ../scr/config.c ../scr/power_manage.c ../scr/semi_auto.c SPIDriver/SPIDriver.c configuration_bits.c exceptions.c interrupts.c main.c system.c user.c Scheduler.c ../Common/bootmode.c
 
 
 
@@ -185,59 +185,17 @@ ${OBJECTDIR}/_ext/2108356922/sdoserv.o: ../Common/sdoserv.c  nbproject/Makefile-
 	@${RM} ${OBJECTDIR}/_ext/2108356922/sdoserv.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/sdoserv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/sdoserv.o.d" -o ${OBJECTDIR}/_ext/2108356922/sdoserv.o ../Common/sdoserv.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
+${OBJECTDIR}/_ext/2108356922/m1eph.o: ../Common/m1eph.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/2108356922" 
+	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" -o ${OBJECTDIR}/_ext/2108356922/m1eph.o ../Common/m1eph.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
 ${OBJECTDIR}/MemoryManager/MemoryManager.o: MemoryManager/MemoryManager.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/MemoryManager" 
 	@${RM} ${OBJECTDIR}/MemoryManager/MemoryManager.o.d 
 	@${RM} ${OBJECTDIR}/MemoryManager/MemoryManager.o 
 	@${FIXDEPS} "${OBJECTDIR}/MemoryManager/MemoryManager.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/MemoryManager/MemoryManager.o.d" -o ${OBJECTDIR}/MemoryManager/MemoryManager.o MemoryManager/MemoryManager.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/SPIDriver/SPIDriver.o: SPIDriver/SPIDriver.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/SPIDriver" 
-	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o.d 
-	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o 
-	@${FIXDEPS} "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" -o ${OBJECTDIR}/SPIDriver/SPIDriver.o SPIDriver/SPIDriver.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/configuration_bits.o: configuration_bits.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
-	@${RM} ${OBJECTDIR}/configuration_bits.o 
-	@${FIXDEPS} "${OBJECTDIR}/configuration_bits.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/exceptions.o: exceptions.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/exceptions.o.d 
-	@${RM} ${OBJECTDIR}/exceptions.o 
-	@${FIXDEPS} "${OBJECTDIR}/exceptions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/interrupts.o: interrupts.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/interrupts.o.d 
-	@${RM} ${OBJECTDIR}/interrupts.o 
-	@${FIXDEPS} "${OBJECTDIR}/interrupts.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/system.o: system.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/system.o.d 
-	@${RM} ${OBJECTDIR}/system.o 
-	@${FIXDEPS} "${OBJECTDIR}/system.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/user.o: user.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/user.o.d 
-	@${RM} ${OBJECTDIR}/user.o 
-	@${FIXDEPS} "${OBJECTDIR}/user.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/Scheduler.o: Scheduler.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Scheduler.o.d 
-	@${RM} ${OBJECTDIR}/Scheduler.o 
-	@${FIXDEPS} "${OBJECTDIR}/Scheduler.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/Scheduler.o.d" -o ${OBJECTDIR}/Scheduler.o Scheduler.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
 ${OBJECTDIR}/_ext/1360936787/Common.o: ../scr/Common.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360936787" 
@@ -293,11 +251,59 @@ ${OBJECTDIR}/_ext/1360936787/semi_auto.o: ../scr/semi_auto.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/1360936787/semi_auto.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360936787/semi_auto.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/1360936787/semi_auto.o.d" -o ${OBJECTDIR}/_ext/1360936787/semi_auto.o ../scr/semi_auto.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
-${OBJECTDIR}/_ext/2108356922/m1eph.o: ../Common/m1eph.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/SPIDriver/SPIDriver.o: SPIDriver/SPIDriver.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/SPIDriver" 
+	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o.d 
+	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o 
+	@${FIXDEPS} "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" -o ${OBJECTDIR}/SPIDriver/SPIDriver.o SPIDriver/SPIDriver.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/configuration_bits.o: configuration_bits.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
+	@${RM} ${OBJECTDIR}/configuration_bits.o 
+	@${FIXDEPS} "${OBJECTDIR}/configuration_bits.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/exceptions.o: exceptions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/exceptions.o.d 
+	@${RM} ${OBJECTDIR}/exceptions.o 
+	@${FIXDEPS} "${OBJECTDIR}/exceptions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/interrupts.o: interrupts.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/interrupts.o.d 
+	@${RM} ${OBJECTDIR}/interrupts.o 
+	@${FIXDEPS} "${OBJECTDIR}/interrupts.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/system.o: system.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/system.o.d 
+	@${RM} ${OBJECTDIR}/system.o 
+	@${FIXDEPS} "${OBJECTDIR}/system.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/user.o: user.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/user.o.d 
+	@${RM} ${OBJECTDIR}/user.o 
+	@${FIXDEPS} "${OBJECTDIR}/user.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/Scheduler.o: Scheduler.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Scheduler.o.d 
+	@${RM} ${OBJECTDIR}/Scheduler.o 
+	@${FIXDEPS} "${OBJECTDIR}/Scheduler.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/Scheduler.o.d" -o ${OBJECTDIR}/Scheduler.o Scheduler.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/_ext/2108356922/bootmode.o: ../Common/bootmode.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2108356922" 
-	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" -o ${OBJECTDIR}/_ext/2108356922/m1eph.o ../Common/m1eph.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	@${RM} ${OBJECTDIR}/_ext/2108356922/bootmode.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2108356922/bootmode.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/bootmode.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/bootmode.o.d" -o ${OBJECTDIR}/_ext/2108356922/bootmode.o ../Common/bootmode.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
 else
 ${OBJECTDIR}/_ext/2108356922/9252_HW.o: ../Common/9252_HW.c  nbproject/Makefile-${CND_CONF}.mk
@@ -378,59 +384,17 @@ ${OBJECTDIR}/_ext/2108356922/sdoserv.o: ../Common/sdoserv.c  nbproject/Makefile-
 	@${RM} ${OBJECTDIR}/_ext/2108356922/sdoserv.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/sdoserv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/sdoserv.o.d" -o ${OBJECTDIR}/_ext/2108356922/sdoserv.o ../Common/sdoserv.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
+${OBJECTDIR}/_ext/2108356922/m1eph.o: ../Common/m1eph.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/2108356922" 
+	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" -o ${OBJECTDIR}/_ext/2108356922/m1eph.o ../Common/m1eph.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
 ${OBJECTDIR}/MemoryManager/MemoryManager.o: MemoryManager/MemoryManager.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/MemoryManager" 
 	@${RM} ${OBJECTDIR}/MemoryManager/MemoryManager.o.d 
 	@${RM} ${OBJECTDIR}/MemoryManager/MemoryManager.o 
 	@${FIXDEPS} "${OBJECTDIR}/MemoryManager/MemoryManager.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/MemoryManager/MemoryManager.o.d" -o ${OBJECTDIR}/MemoryManager/MemoryManager.o MemoryManager/MemoryManager.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/SPIDriver/SPIDriver.o: SPIDriver/SPIDriver.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/SPIDriver" 
-	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o.d 
-	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o 
-	@${FIXDEPS} "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" -o ${OBJECTDIR}/SPIDriver/SPIDriver.o SPIDriver/SPIDriver.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/configuration_bits.o: configuration_bits.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
-	@${RM} ${OBJECTDIR}/configuration_bits.o 
-	@${FIXDEPS} "${OBJECTDIR}/configuration_bits.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/exceptions.o: exceptions.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/exceptions.o.d 
-	@${RM} ${OBJECTDIR}/exceptions.o 
-	@${FIXDEPS} "${OBJECTDIR}/exceptions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/interrupts.o: interrupts.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/interrupts.o.d 
-	@${RM} ${OBJECTDIR}/interrupts.o 
-	@${FIXDEPS} "${OBJECTDIR}/interrupts.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/system.o: system.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/system.o.d 
-	@${RM} ${OBJECTDIR}/system.o 
-	@${FIXDEPS} "${OBJECTDIR}/system.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/user.o: user.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/user.o.d 
-	@${RM} ${OBJECTDIR}/user.o 
-	@${FIXDEPS} "${OBJECTDIR}/user.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
-	
-${OBJECTDIR}/Scheduler.o: Scheduler.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Scheduler.o.d 
-	@${RM} ${OBJECTDIR}/Scheduler.o 
-	@${FIXDEPS} "${OBJECTDIR}/Scheduler.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/Scheduler.o.d" -o ${OBJECTDIR}/Scheduler.o Scheduler.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
 ${OBJECTDIR}/_ext/1360936787/Common.o: ../scr/Common.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360936787" 
@@ -486,11 +450,59 @@ ${OBJECTDIR}/_ext/1360936787/semi_auto.o: ../scr/semi_auto.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/1360936787/semi_auto.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1360936787/semi_auto.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/1360936787/semi_auto.o.d" -o ${OBJECTDIR}/_ext/1360936787/semi_auto.o ../scr/semi_auto.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
-${OBJECTDIR}/_ext/2108356922/m1eph.o: ../Common/m1eph.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/SPIDriver/SPIDriver.o: SPIDriver/SPIDriver.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/SPIDriver" 
+	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o.d 
+	@${RM} ${OBJECTDIR}/SPIDriver/SPIDriver.o 
+	@${FIXDEPS} "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/SPIDriver/SPIDriver.o.d" -o ${OBJECTDIR}/SPIDriver/SPIDriver.o SPIDriver/SPIDriver.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/configuration_bits.o: configuration_bits.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
+	@${RM} ${OBJECTDIR}/configuration_bits.o 
+	@${FIXDEPS} "${OBJECTDIR}/configuration_bits.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/exceptions.o: exceptions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/exceptions.o.d 
+	@${RM} ${OBJECTDIR}/exceptions.o 
+	@${FIXDEPS} "${OBJECTDIR}/exceptions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/exceptions.o.d" -o ${OBJECTDIR}/exceptions.o exceptions.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/interrupts.o: interrupts.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/interrupts.o.d 
+	@${RM} ${OBJECTDIR}/interrupts.o 
+	@${FIXDEPS} "${OBJECTDIR}/interrupts.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/interrupts.o.d" -o ${OBJECTDIR}/interrupts.o interrupts.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/system.o: system.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/system.o.d 
+	@${RM} ${OBJECTDIR}/system.o 
+	@${FIXDEPS} "${OBJECTDIR}/system.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/system.o.d" -o ${OBJECTDIR}/system.o system.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/user.o: user.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/user.o.d 
+	@${RM} ${OBJECTDIR}/user.o 
+	@${FIXDEPS} "${OBJECTDIR}/user.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/user.o.d" -o ${OBJECTDIR}/user.o user.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/Scheduler.o: Scheduler.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Scheduler.o.d 
+	@${RM} ${OBJECTDIR}/Scheduler.o 
+	@${FIXDEPS} "${OBJECTDIR}/Scheduler.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/Scheduler.o.d" -o ${OBJECTDIR}/Scheduler.o Scheduler.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	
+${OBJECTDIR}/_ext/2108356922/bootmode.o: ../Common/bootmode.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2108356922" 
-	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2108356922/m1eph.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/m1eph.o.d" -o ${OBJECTDIR}/_ext/2108356922/m1eph.o ../Common/m1eph.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
+	@${RM} ${OBJECTDIR}/_ext/2108356922/bootmode.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2108356922/bootmode.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/2108356922/bootmode.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -DPIC32_STARTER_KIT -DPIC32_HW -DUSE_SPI -I"../Common" -I"../scr" -MMD -MF "${OBJECTDIR}/_ext/2108356922/bootmode.o.d" -o ${OBJECTDIR}/_ext/2108356922/bootmode.o ../Common/bootmode.c    -DXPRJ_SPI_XC32_PIC32MX795F512L=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -I /Applications/microchip/xc32/v1.40/pic32mx/include/ -mdfp=${DFP_DIR}
 	
 endif
 

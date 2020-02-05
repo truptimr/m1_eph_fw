@@ -462,6 +462,11 @@ UINT8 MailboxServiceInd(TMBX MBXMEM *pMbx)
 {
     UINT8 result;
 
+    /*only FoE is allowed in Boot mode*/
+    if(bBootMode == TRUE && (MBX_TYPE_FOE != ((pMbx->MbxHeader.Flags[MBX_OFFS_TYPE] & MBX_MASK_TYPE) >> MBX_SHIFT_TYPE )))
+    {
+        return MBXERR_UNSUPPORTEDPROTOCOL;
+    }
 
     switch ( (pMbx->MbxHeader.Flags[MBX_OFFS_TYPE] & MBX_MASK_TYPE) >> MBX_SHIFT_TYPE )
     {

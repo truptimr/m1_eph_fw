@@ -12,10 +12,11 @@ build/SPI_XC32_PIC32MX795F512L/production/_ext/2108356922/foeappl.o:  \
  ../Common/ecatfoe.h  \
 ../Common/mailbox.h  \
 ../Common/foeappl.h  \
- ../Common/applInterface.h  \
+ ../Common/bootmode.h  \
+../Common/applInterface.h  \
 ../Common/objdef.h  \
-../Common/sdoserv.h  \
- ../Common/ecatcoe.h  \
+ ../Common/sdoserv.h  \
+../Common/ecatcoe.h  \
 ../Common/ecatappl.h  \
-../Common/eoeappl.h  \
- ../Common/ecateoe.h 
+ ../Common/eoeappl.h  \
+../Common/ecateoe.h 

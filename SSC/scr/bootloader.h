@@ -19,26 +19,9 @@
 
 #pragma once
 
-#include "m1eph.h"
-# define _SUPPRESS_PLIB_WARNING 1 // #warning The PLIB functions and macros in this file will be removed from the MPLAB XC32 C/C++ Compiler in future releases
+#include <stdint.h>
 
-typedef long double float64_t;
+void erase_flash(void);
+void firmware_dl(uint16_t * pData, uint16_t Size);
 
-extern int safety_disable;
-
-struct adc_t
-{
-  float lc1;
-  float lc2;
-  float lc3;
-  float hk;
-};
-
-enum hk_channel
-{
-  TEMP_CHK
-  , Vin_CHK
-  , P5V_CHK
-  , CV_DRV_PWR_CHK
-};
 

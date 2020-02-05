@@ -125,6 +125,8 @@ PROTO    void       PDO_InputMapping(void);
 
 PROTO    void       ECAT_SetLedIndication(void);
 PROTO    void       CalcSMCycleTime(void);
+PROTO    UINT16     ESC_EepromAccess(UINT32 wordaddress, UINT16 wordsize, UINT16 MBXMEM *pData, UINT8 access);
+PROTO    UINT16     ESC_EepromWriteCRC(void);
 
 
 

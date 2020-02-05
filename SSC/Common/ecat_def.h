@@ -350,7 +350,7 @@ MAILBOX_SUPPORTED: This switch is set automatically if at least one mailbox prot
 BOOTSTRAPMODE_SUPPORTED: If the firmware update over FoE services should be supported, then this switch shall be set.<br>
 If this switch is set, then also "FOE_SUPPORTED" shall be set.  */
 #ifndef BOOTSTRAPMODE_SUPPORTED
-#define BOOTSTRAPMODE_SUPPORTED                   0 //This define was already evaluated by ET9300 Project Handler(V. 1.4.1.0)!
+#define BOOTSTRAPMODE_SUPPORTED                   1 //This define was already evaluated by ET9300 Project Handler(V. 1.4.1.0)!
 #endif
 
 /** 
@@ -401,7 +401,7 @@ STATIC_OBJECT_DIC: If this switch is set, the object dictionary is "build" stati
 /** 
 ESC_EEPROM_ACCESS_SUPPORT: If this switch is set the slave stack provides functions to access the EEPROM. */
 #ifndef ESC_EEPROM_ACCESS_SUPPORT
-#define ESC_EEPROM_ACCESS_SUPPORT                 0 //This define was already evaluated by ET9300 Project Handler(V. 1.4.1.0)!
+#define ESC_EEPROM_ACCESS_SUPPORT                 1 //This define was already evaluated by ET9300 Project Handler(V. 1.4.1.0)!
 #endif
 
 

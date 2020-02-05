@@ -26,6 +26,7 @@
         <itemPath>../Common/mailbox.h</itemPath>
         <itemPath>../Common/objdef.h</itemPath>
         <itemPath>../Common/sdoserv.h</itemPath>
+        <itemPath>../Common/bootmode.h</itemPath>
       </logicalFolder>
       <logicalFolder name="scr" displayName="scr" projectFiles="true">
         <itemPath>../scr/console.h</itemPath>
@@ -79,6 +80,7 @@
         <itemPath>../Common/objdef.c</itemPath>
         <itemPath>../Common/sdoserv.c</itemPath>
         <itemPath>../Common/m1eph.c</itemPath>
+        <itemPath>../Common/bootmode.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="MemoryManager" projectFiles="true">
         <itemPath>MemoryManager/MemoryManager.c</itemPath>

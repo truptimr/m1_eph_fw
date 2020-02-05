@@ -274,22 +274,22 @@ void semi_auto(){
  
                 }
 
-                // is there a user port enable/disable command
-                uint8_t i;
-                for (i = TPS238X_PORT_1; i <= TPS238X_PORT_4; i++)
-					{
-                        // pet_the_dog();
-						
-							sysPortNum = tps_GetSystemPortNumber (i2cAddList[devNum], (TPS238x_PortNum_t)i);                           
-                            
-                            if(disable[sysPortNum]){
-                                tps_SetPortPower (sysPortNum, TPS_OFF);
-                            }
-                            if(enable[sysPortNum] && !disable[sysPortNum]){
-                                tps_SetPortPower (sysPortNum, TPS_ON);
-                            }
-                        
-                }
+//                // is there a user port enable/disable command
+//                uint8_t i;
+//                for (i = TPS238X_PORT_1; i <= TPS238X_PORT_4; i++)
+//					{
+//                        // pet_the_dog();
+//						
+//							sysPortNum = tps_GetSystemPortNumber (i2cAddList[devNum], (TPS238x_PortNum_t)i);                           
+//                            
+//                            if(disable[sysPortNum]){
+//                                tps_SetPortPower (sysPortNum, TPS_OFF);
+//                            }
+//                            if(enable[sysPortNum] && !disable[sysPortNum]){
+//                                tps_SetPortPower (sysPortNum, TPS_ON);
+//                            }
+//                        
+//                }
 
 				// Did we have a new Detection Event?
 				if (intStatus.DETC_Detection_Cycle)

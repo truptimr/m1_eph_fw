@@ -372,6 +372,27 @@ UINT8 FOE_ServiceInd(TFOEMBX MBXMEM * pFoeInd)
         u16FileAccessState = FOE_READY;
     }
 
+    if ( bBootMode )
+    {
+        /* in BOOT mode the mailbox buffer is not sent via the mailbox functions
+           because only FoE is allowed in BOOT mode, so we have to include the
+            mailbox data link layer counter */
+        pFoeInd->MbxHeader.Flags[MBX_OFFS_COUNTER] &= ~MBX_MASK_COUNTER;
+        if ( (u8MbxReadCounter & 0x07) == 0 )
+        {
+            /* counter 0 is not allowed if mailbox data link layer is supported */
+            u8MbxReadCounter = 1;
+        }
+        /* store the counter in the mailbox header */
+        pFoeInd->MbxHeader.Flags[MBX_OFFS_COUNTER] |= u8MbxReadCounter << MBX_SHIFT_COUNTER;
+        /* increment the counter for the next service */
+          u8MbxReadCounter++;
+        /* call the function to send the mailbox service directly,
+           in BOOT mode we can be sure that the send mailbox is empty
+           because no parallel services are allowed */
+        MBX_CopyToSendMailbox((TMBX MBXMEM *) pFoeInd);
+    }
+    else
     {
         if ( MBX_MailboxSendReq((TMBX MBXMEM *) pFoeInd, FOE_SERVICE) != 0 )
         {

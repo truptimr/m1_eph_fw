@@ -55,6 +55,7 @@ V4.10 FOE 1-14: Filetransfer over FoE: Files can be read and stored to harddisk<
 #undef _FOEAPPL_
 #define _FOEAPPL_ 0
 
+#include "bootmode.h"
 
 
 

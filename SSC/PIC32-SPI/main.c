@@ -169,9 +169,11 @@ int32_t main(void)
     INTEnableInterrupts();
     MainInit();
 
-    /*Initialize Axes structures*/
-//TODO:    CiA402_Init();
-
+//// write to station alias register 
+// 
+//    UINT16 MBXMEM Dongleid = 0;
+//    HW_EscWriteDWord(Dongleid, 0x12); // 0x12 = configured station alias
+  
     /*Create basic mapping*/
     APPL_GenerateMapping(&nPdInputSize,&nPdOutputSize);
 

@@ -28,10 +28,6 @@
 #define _M1EPH_ 1
 #include "m1eph.h"
 #undef _M1EPH_
-#include "ti_wdt.h"
-#include "console.h"
-#include "semi_auto.h"
-#include "m1eph.h"
 /*--------------------------------------------------------------------------------------
 ------
 ------    local types and defines
@@ -120,22 +116,6 @@ UINT16 APPL_StopMailboxHandler(void)
 
 UINT16 APPL_StartInputHandler(UINT16 *pIntMask)
 {
-//         UINT16 SiiIDValue = 0;
-////    Limits.Unique_id = 701;
-//    ESC_EepromAccess(0x4,1,&SiiIDValue,ESC_RD);
-//    if ((SiiIDValue != Limits.Unique_id)|| !Limits.Unique_id){
-////        printk("alias address mismatch detected UID = %u SII = %u \n\r", Limits.Unique_id, SiiIDValue);
-//        Status0x6000.Err_locid = 1;
-//        safety_disable = 1;
-//        UINT16 rtn = ESC_EepromAccess(0x4,1,&Limits.Unique_id,ESC_WR);
-//        ESC_EepromWriteCRC();
-//    }
-//    else{
-//        Status0x6000.Err_locid = 0;
-//    }
-//   
-
-//    
     return ALSTATUSCODE_NOERROR;
 }
 
@@ -289,8 +269,11 @@ UINT16 APPL_GenerateMapping(UINT16 *pInputSize,UINT16 *pOutputSize)
 *////////////////////////////////////////////////////////////////////////////////////////
 void APPL_InputMapping(UINT16* pData)
 {
-    memcpy((UINT8*)pData, (UINT8*)(&Status0x6000)+sizeof(Status0x6000.u16SubIndex0), sizeof(Status0x6000)-sizeof(Status0x6000.u16SubIndex0));
-
+#if _WIN32
+   #pragma message ("Warning: Implement input (Slave -> Master) mapping")
+#else
+    #warning "Implement input (Slave -> Master) mapping"
+#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -302,8 +285,11 @@ void APPL_InputMapping(UINT16* pData)
 *////////////////////////////////////////////////////////////////////////////////////////
 void APPL_OutputMapping(UINT16* pData)
 {
-    memcpy((UINT8*)(&Control0x7000)+sizeof(Control0x7000.u16SubIndex0), (UINT8*)pData, sizeof(Control0x7000)-sizeof(Control0x7000.u16SubIndex0)); // XXX skip u16SubIndex0
-
+#if _WIN32
+   #pragma message ("Warning: Implement output (Master -> Slave) mapping")
+#else
+    #warning "Implement output (Master -> Slave) mapping"
+#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -313,12 +299,11 @@ void APPL_OutputMapping(UINT16* pData)
 *////////////////////////////////////////////////////////////////////////////////////////
 void APPL_Application(void)
 {
-    pet_the_dog();
-    
-    Status0x6000.Slvhb++;
-    update_port_control();
-    semi_auto();
-    update_port_status();
+#if _WIN32
+   #pragma message ("Warning: Implement the slave application")
+#else
+    #warning "Implement the slave application"
+#endif
 }
 
 #if EXPLICIT_DEVICE_ID

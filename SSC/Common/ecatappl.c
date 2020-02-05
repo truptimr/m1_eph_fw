@@ -148,6 +148,7 @@ V4.00 APPL 6: The main function was split in MainInit and MainLoop
 ------
 --------------------------------------------------------------------------------------*/
 
+#define MAX_CMD_RETIRES     10
 
 #ifndef ECAT_TIMER_INC_P_MS
 /**
@@ -868,6 +869,22 @@ UINT16 MainInit(void)
     COE_ObjInit();
 
 
+    /*Reset PDI Access*/
+    {
+    UINT32 eepromConfigControl = 0; //register (0x0500 : 0x0503) values
+
+    HW_EscReadDWord(eepromConfigControl,ESC_EEPROM_CONFIG_OFFSET);
+    eepromConfigControl = SWAPDWORD(eepromConfigControl);
+
+    if((eepromConfigControl & ESC_EEPROM_ASSIGN_TO_PDI_MASK) > 0)
+    {
+        /*Clear access register(0x0501.1)*/
+        eepromConfigControl &= ~ESC_EEPROM_LOCKED_BY_PDI_MASK;
+
+        eepromConfigControl = SWAPDWORD(eepromConfigControl);
+        HW_EscWriteDWord(eepromConfigControl,ESC_EEPROM_CONFIG_OFFSET);
+    }
+    }
     /*indicate that the slave stack initialization finished*/
     bInitFinished = TRUE;
 
@@ -1104,6 +1121,248 @@ void ECAT_Application(void)
 #endif /* #if MIN_PD_CYCLE_TIME == 0 */
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
+/**
+ \param        wordaddress      WORD based address in the EEPROM to be read
+ \param        wordsize         size in WORD of EEPROM data to be read
+ \param        pData            buffer for EEPROM to be read or with EEPROM data to be written
+ \param        access           read (ESC_RD) or write (ESC_WR) access
+
+ \return     0 - success, > 0: error code
+
+ \brief        This function is called to read or write the EEPROM data, for BigEndian
+ \brief        Controller (switch BIG_ENDIAN_FORMAT set) the data has to be swapped outside
+ \brief        of this function)
+*////////////////////////////////////////////////////////////////////////////////////////
+
+UINT16 ESC_EepromAccess(UINT32 wordaddress, UINT16 wordsize, UINT16 MBXMEM *pData, UINT8 access)
+{
+    UINT16 i;
+    UINT8 u8TimeOut;
+    UINT16 u16RetErr = 0;
+    UINT16 u16WordOffset = 0;
+    UINT8 RetryCnt = MAX_CMD_RETIRES; //Maximum number of retries (evaluated in case of an Acknowledge Error)
+
+    VARVOLATILE UINT32 eepromConfigControl = 0; //register (0x0500 : 0x0503) values
+
+    HW_EscReadDWord(eepromConfigControl,ESC_EEPROM_CONFIG_OFFSET);
+
+
+    if ( eepromConfigControl & ESC_EEPROM_ASSIGN_TO_PDI_MASK )
+    {
+        /* register 0x500.0 is set (should be written by the master before sending
+        the state transition request to PREOP),we have access to the EEPROM */
+        UINT16 step = 1; /* we write always only 1 word with one write access */
+
+        if ( access == ESC_RD )
+        {
+            /* read access requested, we have to check if we read 2 (register 0x502.6=0)
+            or 4 words (register 0x502.6=1) with one access */
+            if ( eepromConfigControl & ESC_EEPROM_SUPPORTED_READBYTES_MASK )
+            {
+                step = 4; /* we get 4 words with one read access */
+            }
+            else
+            {
+                step = 2; /* we get 2 words with one read access */
+            }
+        }
+
+        /* first we have to lock the EEPROM access that we will not be interrupted by the master
+        by setting register 0x501.0 */
+        /*Clear access register(0x0501)*/
+        eepromConfigControl &= 0xFFFF00FF;
+
+        /*Set access rights to PDI*/
+        eepromConfigControl |= ESC_EEPROM_LOCKED_BY_PDI_MASK;
+
+        HW_EscWriteDWord(eepromConfigControl,ESC_EEPROM_CONFIG_OFFSET);
+        for (i = 0; i < wordsize;)
+        {
+            /* we have to set the start address in register 0x504-0x507 */
+            HW_EscWriteDWord(wordaddress, ESC_EEPROM_ADDRESS_OFFSET);
+
+            if ( access == ESC_RD )
+            {
+                /* read access, we start the reading by setting 0x502.8
+                (will be reset automatically when reading is finished) */
+                eepromConfigControl &= ESC_EEPROM_CONFIG_MASK;
+                eepromConfigControl |= ESC_EEPROM_CMD_READ_MASK;
+
+                HW_EscWriteDWord(eepromConfigControl,ESC_EEPROM_CONFIG_OFFSET);
+            }
+            else
+            {
+                /* write access, we write the data in register 0x508-0x509 */
+                HW_EscWriteDWord(pData[i],ESC_EEPROM_DATA_OFFSET);
+
+                /* we start the writing by setting 0x502.9
+                (will be reset automatically when writing is finished) */
+                eepromConfigControl &= ESC_EEPROM_CONFIG_MASK;
+                eepromConfigControl |= ESC_EEPROM_CMD_WRITE_MASK;
+
+                HW_EscWriteDWord(eepromConfigControl, ESC_EEPROM_CONFIG_OFFSET);
+            }
+
+            do
+            {
+
+                /*Wait 100 cycles before reading EEPROM status*/
+                u8TimeOut = 100;
+                while (u8TimeOut > 0)
+                {
+                    u8TimeOut--;
+                }
+                HW_EscReadDWord(eepromConfigControl, ESC_EEPROM_CONFIG_OFFSET);
+
+            }
+            while ( eepromConfigControl & (ESC_EEPROM_BUSY_MASK));
+
+            /* we have to check if the access was without errors */
+            HW_EscReadDWord(eepromConfigControl, ESC_EEPROM_CONFIG_OFFSET);
+
+            if ( eepromConfigControl & ESC_EEPROM_ERROR_MASK )
+            {
+                if(!(eepromConfigControl & ESC_EEPROM_ERROR_CMD_ACK) && (RetryCnt != 0))
+                {
+                    /* Only abort if non Acknowledge Error occurs
+                       In case of an Acknowledge Error the operation should be repeated*/
+                    u16RetErr =  ALSTATUSCODE_EE_ERROR;
+                    break;
+                }
+            }
+            else
+            {
+                if ( access == ESC_RD )
+                {
+                    UINT16 u16BytesToCopy = (step << 1);
+
+                    /* read access, get the data from register 0x508-0x50B(0x50F)*/
+                    if((u16WordOffset + step) > wordsize)
+                    {
+                        /*less than "step" words are left => copy only last required Bytes*/
+                        u16BytesToCopy = (wordsize - u16WordOffset) << 1;
+                    }
+
+                    HW_EscRead((MEM_ADDR *) &pData[i], ESC_EEPROM_DATA_OFFSET, u16BytesToCopy);
+                }
+            }
+
+            if(!(eepromConfigControl & ESC_EEPROM_ERROR_MASK))
+            {
+                /* In case of Acknowledge Error repeat same operation, otherwise increment the address and proceed*/
+                wordaddress += step;
+                u16WordOffset +=step;
+                RetryCnt = MAX_CMD_RETIRES;
+
+                i += step;
+            }
+            else
+            {
+                RetryCnt --;
+                if(RetryCnt > 0)
+                {
+/*ECATCHANGE_START(V5.12) ECAT8*/
+                    /* Set wait (11ms / retries) until repeat EEPROM access */
+                    INT32 i32TimeoutTicks = (INT32)(ECAT_TIMER_INC_P_MS * (11/ MAX_CMD_RETIRES));
+/*ECATCHANGE_END(V5.12) ECAT8*/
+                    UINT16 u16CurTimer = 0;
+                    UINT16 u16LastTimer = HW_GetTimer();
+                    UINT16 Delta = 0;
+
+                    /* Start wait loop */
+                    while(i32TimeoutTicks > 0)
+                    {
+                        u16CurTimer = HW_GetTimer();
+
+                        if(u16LastTimer < u16CurTimer)
+                        {
+/*ECATCHANGE_START(V5.12) ECAT8*/
+                            Delta = (u16CurTimer - u16LastTimer);
+/*ECATCHANGE_END(V5.12) ECAT8*/
+                        }
+                        else
+                        {
+                            /* 16bit overrun*/
+                            Delta = (0xFFFF - u16LastTimer) + u16CurTimer;
+                        }
+                        i32TimeoutTicks = i32TimeoutTicks - Delta;
+
+                        u16LastTimer = u16CurTimer;
+                    }
+                }
+                else
+                {
+                    /* Abort EEPROM access if max retires are reached*/
+                    u16RetErr =  ALSTATUSCODE_EE_ERROR;
+                    break;
+                }
+            }
+        } //for-loop over all data
+    } // if EEPROM access is assigned to PDI
+    else
+    {
+        u16RetErr = ALSTATUSCODE_EE_NOACCESS;
+    }
+
+    /* clear EEPROM control register 0x500 */
+    eepromConfigControl = 0;
+
+    HW_EscWriteDWord(eepromConfigControl, ESC_EEPROM_CONFIG_OFFSET);
+    return u16RetErr;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/**
+ \return     success : ALSTATUSCODE_WAITFORCOLDSTART
+            failed  : EEPROM ERRROR Code
+
+ \brief        This function recalculates the EEPROM CRC and writes the updated value to EEPROM.
+            After writing the ESC Config Area a device restart is required!
+ *////////////////////////////////////////////////////////////////////////////////////////
+UINT16 ESC_EepromWriteCRC(void)
+{
+    UINT16 u16Return = ALSTATUSCODE_UNSPECIFIEDERROR;
+    UINT16 EscCfgData[8];
+    UINT16 u16Crc = 0x00FF;
+    UINT16 i,j;
+
+    
+    u16Return = ESC_EepromAccess(0,7,(UINT16 *)EscCfgData,ESC_RD);
+    if(u16Return == 0)
+    {
+        UINT8 *pData = (UINT8 *)EscCfgData;
+
+        for(i = 0; i < 14; i++ )
+        {
+            u16Crc ^= pData[i];
+
+            for(j=0; j<8; j++ )
+            {
+                if( u16Crc & 0x80 )
+                {
+                    u16Crc = (u16Crc<<1) ^ 0x07;
+                }
+                else
+                {
+                    u16Crc <<= 1;
+                }
+            }
+        }
+
+        /*only low Byte shall be written*/
+        u16Crc &= 0x00FF;
+
+        /*write new calculated Crc to Esc Config area*/
+        u16Return = ESC_EepromAccess(7,1,&u16Crc,ESC_WR);
+        if(u16Return == 0)
+        {
+            u16Return =  ALSTATUSCODE_WAITFORCOLDSTART;
+        }
+    }
+
+    return u16Return;
+}
 
 
 

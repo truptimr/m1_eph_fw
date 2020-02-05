@@ -8,6 +8,8 @@
             <file>file:/Users/tranka/Documents/m1_eph_fw/SSC/Common/m1eph.c</file>
             <file>file:/Users/tranka/Documents/m1_eph_fw/SSC/scr/usci_uart.c</file>
             <file>file:/Users/tranka/Documents/m1_eph_fw/SSC/scr/semi_auto.c</file>
+            <file>file:/Users/tranka/Documents/m1_eph_fw/SSC/Common/ecatslv.c</file>
+            <file>file:/Users/tranka/Documents/m1_eph_fw/SSC/scr/global.h</file>
         </group>
     </open-files>
 </project-private>
